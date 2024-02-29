@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!------------------------------------ cdn links for react  ------------------------>
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+     <!-- ---------------------------------------------------------------------------------- -->
+    
+    <!-------------------Adding style to all elements ------------------------------------->
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+      #root {
+        border: 2px solid red;
+        padding: 10px 20px;
+      }
+      h1 {
+        font-size: 3rem;
+        padding: 10px 20px;
+      }
+      p {
+        line-height: 2.5rem;
+        text-align: justify;
+        font-size: 2rem;
+        word-spacing: 10px;
+        padding: 20px;
+        color: #4d4b4b;
+      }
+    </style>
+    <!-------------------------------------------------------------------------------->
+
+    <title>react</title>
+
+  </head>
+
+  <body>
+
+    <div id="root"></div>
+
+    <!-- -------------------React start ------------------------------------------------>
+    <script>
+      let url = "https://developer.mozilla.org/en-US/";
+
+      let anchor = React.createElement("a", { href: { url } }, "rest of MDN");
+      let container = React.createElement("div",null,
+        React.createElement("h1", null, "Learn web Development"),
+        React.createElement("p",null,"Welcome to the MDN learning area. This set of articles aims to guide complete beginners to web development with all that they need to start coding websites."),
+        React.createElement("p", null, [
+          `The aim of this area of MDN is not to take you from "beginner" to "expert" but to take you from "beginner" to "comfortable." From there, you should be able to start making your way, learning from `,
+          anchor,
+          ` and other intermediate to advanced resources that assume a lot of previous knowledge.`,
+        ]),
+        React.createElement("p",null,"If you are a complete beginner, web development can be challenging — we will hold your hand and provide enough detail for you to feel comfortable and learn the topics properly. You should feel at home whether you are a student learning web development (on your own or as part of a class), a teacher looking for class materials, a hobbyist, or someone who just wants to understand more about how web technologies work.")
+        );
+        
+      ReactDOM.render(container, document.getElementById("root"));
+
+    </script>
+    <!-- ------------------------------------------------------------------------------- -->
+  </body>
+</html>
